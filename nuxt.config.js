@@ -3,13 +3,12 @@ export default {
     strategies: {
       google: {
         clientId: '633700990269-fr8nu9gff7pib8k619io5061mp0hfd4f',
-        codeChallengeMethod: '',
-        responseType: 'code',
-        endpoints: {
-          token: 'http://localhost:8000/user/google/', // somm backend url to resolve your auth with google and give you the token back
-          userInfo: 'http://localhost:8000/auth/user/' // the endpoint to get the user info after you recived the token
-        },
+        codeChallengeMethod: "",
+        responseType: 'token id_token',
       },
+    },
+    redirect: {
+      login: '/api/login'
     }
   },
 
@@ -49,7 +48,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next', "@nuxtjs/axios"
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

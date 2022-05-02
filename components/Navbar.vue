@@ -10,7 +10,19 @@
         {{ name }}
       </NuxtLink>
     </div>
-    <LoginButton />
+    <LoginButton v-if="!$auth.user" />
+    <div
+      v-else
+      class="flex items-center space-x-4"
+    >
+      <div>Welcome {{ $auth.user.name}}</div>
+      <div
+        class="border rounded p-1"
+        @click="$auth.logout('google')"
+      >
+        Logout
+      </div>
+    </div>
   </div>
 </template>
 
@@ -26,11 +38,12 @@ export default {
 
   data() {
     return {
-      navigations: [{
-        name: 'Test',
-        link: '/test'
-      }]
+      navigations: []
     }
+  },
+
+  created() {
+
   }
 }
 </script>
