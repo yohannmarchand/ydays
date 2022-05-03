@@ -1,8 +1,11 @@
 <template>
-  <div class="mt-6">
-    <SheetInput />
+  <div class="flex">
+    <SideNav />
+    <div class="flex-grow mt-6">
+      <SheetInput />
 
-    <SpreadSheetList />
+      <SpreadSheetList />
+    </div>
   </div>
 </template>
 

@@ -38,7 +38,7 @@ export default {
 
   computed: {
     spreadSheets() {
-      return this.$store.getters["spreadsheet/getUserSpreadSheet"](this.$auth.user.sub)
+      return this.$store.getters["spreadsheet/getUserSpreadSheet"](this.$auth?.user.sub)
     }
   }
 }

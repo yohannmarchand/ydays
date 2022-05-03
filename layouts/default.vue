@@ -2,12 +2,8 @@
   <div>
     <Navbar />
 
-    <div class="flex pt-16">
-      <SideNav />
-      <div class="flex-grow px-8">
-        <Nuxt />
-      </div>
-
+    <div class="pt-16 px-8">
+      <Nuxt />
     </div>
   </div>
 </template>

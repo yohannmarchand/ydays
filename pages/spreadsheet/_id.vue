@@ -1,11 +1,18 @@
 <template>
   <div>
-
+    <Table
+      v-if="sheet"
+      :value="sheet.values"
+    />
   </div>
 </template>
 
 <script>
+import Table from "../../components/Table";
+
 export default {
+  components: {Table},
+
   data() {
     return {
       sheet: null
