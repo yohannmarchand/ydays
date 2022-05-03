@@ -4,7 +4,7 @@
 
     <div class="flex pt-16">
       <SideNav />
-      <div class="px-8">
+      <div class="flex-grow px-8">
         <Nuxt />
       </div>
 
