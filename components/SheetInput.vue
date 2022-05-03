@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-md mx-auto">
+  <div class="max-w-xl mx-auto">
     <div class="font-semibold">
       Add a Google Sheet
     </div>
@@ -56,7 +56,7 @@ export default {
 
   methods: {
     search() {
-      this.$store.dispatch('spreadsheet/fetchSheet', this.value).then(data => this.spreadSheet = data)
+      this.$store.dispatch('spreadsheet/fetchSpreadsheet', this.value).then(data => this.spreadSheet = data)
     },
 
     add() {
@@ -69,7 +69,8 @@ export default {
       this.$store.commit('spreadsheet/add', {
         id: this.spreadSheet.spreadsheetId,
         title: this.spreadSheet.properties.title,
-        sheets: sheets
+        sheets: sheets,
+        user: this.$auth.user.sub
       })
 
       this.spreadSheet = null

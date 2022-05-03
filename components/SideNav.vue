@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 pl-6 pr-10 h-screen overflow-y-auto border border-l-0">
+  <div class="py-4 pl-6 pr-10 h-screen overflow-y-auto border border-l-0 w-60">
     <div class="font-semibold">Liste de travail: </div>
     <hr class="bg-zinc-800 my-4">
 
@@ -22,7 +22,7 @@
           •
           <NuxtLink
             class="underline"
-            :to="`/sheet/${sheet.id}`"
+            :to="`/spreadsheet/${spreadSheet.id}/sheet/${sheet.sheetId}`"
           >
             {{ sheet.title }}
           </NuxtLink>
@@ -38,7 +38,7 @@ export default {
 
   computed: {
     spreadSheets() {
-      return this.$store.state.spreadsheet.spreadSheets
+      return this.$store.getters["spreadsheet/getUserSpreadSheet"](this.$auth.user.sub)
     }
   }
 }
