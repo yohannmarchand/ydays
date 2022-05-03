@@ -6,8 +6,11 @@ export const state = () => ({
 
 export const getters = {
   getUserSpreadSheet: (state) => (userId) => {
-    console.log(userId)
     return state.spreadSheets.filter(spreadSheet => spreadSheet.user === userId)
+  },
+
+  getSpreadSheetById: (state) => (id) => {
+    return state.spreadSheets.find(spreadSheet => spreadSheet.id === id)
   }
 }
 
@@ -24,8 +27,8 @@ export const actions = {
     })
   },
 
-  fetchSheet({ state, commit}, id) {
-    return axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${id}`, { params: {key: 'AIzaSyCdSW55KU1QxTukzbrTaK5PaknsCDH5qIQ'}}).then(data => {
+  fetchsheetValue({ state, commit}, { id, sheet }) {
+    return axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${id}/values/'${sheet}'`, { params: {key: 'AIzaSyCdSW55KU1QxTukzbrTaK5PaknsCDH5qIQ'}}).then(data => {
       return data.data
     })
   }

@@ -22,7 +22,7 @@
           •
           <NuxtLink
             class="underline"
-            :to="`/spreadsheet/${spreadSheet.id}/sheet/${sheet.sheetId}`"
+            :to="`/spreadsheet/${spreadSheet.id}?sheet=${sheet.sheetId}`"
           >
             {{ sheet.title }}
           </NuxtLink>
