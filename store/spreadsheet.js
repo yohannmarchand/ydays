@@ -5,10 +5,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-  add({state}, spreadSheet) {
-    state.spreadSheets.push({
-      spreadSheet,
-    })
+  add(state , spreadSheet) {
+    state.spreadSheets.push(spreadSheet)
   },
 }
 

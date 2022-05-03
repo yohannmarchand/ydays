@@ -29,7 +29,7 @@
           class="flex items-center space-x-4"
         >
           <div class="flex-grow">{{ properties.title }}</div>
-          <input type="checkbox" :name="properties.sheetId">
+          <input type="checkbox" :name="properties.sheetId" checked>
         </div>
 
       </div>
@@ -67,7 +67,7 @@ export default {
       })
 
       this.$store.commit('spreadsheet/add', {
-        id: this.spreadSheet.properties.spreadsheetId,
+        id: this.spreadSheet.spreadsheetId,
         title: this.spreadSheet.properties.title,
         sheets: sheets
       })

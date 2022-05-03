@@ -7,11 +7,12 @@
 </template>
 
 <script>
+import SpreadSheetList from "./SpreadSheetList";
 import SheetInput from "../SheetInput";
 
 export default {
   name: "AuthView",
 
-  components: {SheetInput}
+  components: {SpreadSheetList, SheetInput}
 }
 </script>
