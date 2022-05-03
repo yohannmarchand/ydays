@@ -1,13 +1,11 @@
 <template>
   <div>
-    admin
+    guest
   </div>
 </template>
 
 <script>
 export default {
-  name: "home",
-
-  middleware: 'auth'
+  name: "GuestView"
 }
 </script>
