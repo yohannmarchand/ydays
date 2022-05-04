@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 pl-6 pr-10 h-screen overflow-y-auto border border-l-0 w-60">
+  <div class="w-md py-4 pl-6 pr-10 h-screen border border-l-0">
     <div class="font-semibold">Liste de travail: </div>
     <hr class="bg-zinc-800 my-4">
 

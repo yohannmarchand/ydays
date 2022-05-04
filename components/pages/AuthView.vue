@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <SideNav />
-    <div class="flex-grow mt-6 mx-4">
+    <div class="mt-6 mx-4">
       <SheetInput />
 
       <SpreadSheetList />

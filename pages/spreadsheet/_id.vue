@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <SideNav />
-    <div v-if="sheet" class="flex-grow mt-6">
+    <div v-if="sheet" class="mt-6">
       <Table
         v-if="isEditMode"
         :value="sheet.values"
@@ -74,6 +74,8 @@ export default {
 
   watch: {
     $route() {
+      this.isEditMode = true
+
       if (this.$route.query.sheet && this.spreadSheet) {
         const tempSheet = this.spreadSheet.sheets.find(({ sheetId }) => sheetId == this.$route.query.sheet)
         this.$store.dispatch("spreadsheet/fetchsheetValue", { id: this.$route.params.id, sheet: tempSheet.title}).then(data => {
