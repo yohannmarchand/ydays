@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-xl mx-auto">
+  <div class="w-full mx-auto">
     <div class="font-semibold">
       Add a Google Sheet
     </div>
@@ -49,7 +49,7 @@ export default {
 
   data() {
     return {
-      value: '1to4g36EurftdYoxrAQRAK0LAbraIRX-z5Ao-cjJxC4A',
+      value: '',
       spreadSheet: null
     }
   },
