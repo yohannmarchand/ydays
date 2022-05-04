@@ -48,7 +48,7 @@
 
     <button
       class="w-60 mx-auto mt-4 bg-green-500 text-white px-6 py-2"
-      @click="formattedValue"
+      @click="$emit('save', cols)"
     >
       Enregistrer
     </button>
@@ -80,14 +80,6 @@ export default {
     display(col) {
       this.cols[col].isDisplay = !this.cols[col].isDisplay
     },
-
-    formattedValue() {
-      let formattedArray = this.value
-
-      formattedArray.shift()
-
-      console.log(formattedArray)
-    }
   }
 }
 </script>
